@@ -1,0 +1,9 @@
+# Preserve exact Python source bytes checked by evaluation metadata.
+*.py -text
+# Preserve serialized model bytes across operating systems.
+*.joblib -text -diff
+*.md text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.txt text eol=lf
+*.toml text eol=lf

@@ -1,0 +1,231 @@
+{
+  "tanggal": "2026-10-28T21:26:16.919274+07:00",
+  "model_terpilih": "Random_Forest",
+  "fitur": [
+    "return_1",
+    "return_3",
+    "return_7",
+    "volatilitas_7",
+    "volatilitas_14",
+    "rasio_sma_7",
+    "rasio_sma_14",
+    "rasio_volume_7",
+    "perubahan_log_volume_1"
+  ],
+  "labels": [
+    "Naik",
+    "Tidak_Naik"
+  ],
+  "seed": 42,
+  "sklearn_version": "1.9.1",
+  "split_sha256": {
+    "train": "0fca9a3b5fdaaafbd0d51e3b9104a3f7754d0999dc4c23ab0cef6b89067bb424",
+    "validasi": "ca84eb33427e11ed375e5b5bed93c1caf55074e1a983a45449f74242f87ff7b2",
+    "test": "3a61a95f4ab09cb4be6c022dac2c7201ac02c40f549d1dadb94d9ebe5a01a008"
+  },
+  "fitur_code_sha256": "80ca90098548f2084ad681a6948a0eb1ed5d727b2d257a6bfac86ef9a340c02e",
+  "model_sha256": "118b490ebd294693fb0c3004eca3011c1be1d9d439474b9c6f1c76499f42e013",
+  "train_n": 1302,
+  "validasi_n": 278,
+  "validasi": {
+    "Baseline_Mayoritas": {
+      "accuracy": 0.5035971223021583,
+      "balanced_accuracy": 0.5,
+      "f1_macro": 0.3349282296650718,
+      "n": 278,
+      "per_kelas": {
+        "Naik": {
+          "precision": 0.5035971223021583,
+          "recall": 1.0,
+          "f1-score": 0.6698564593301436,
+          "support": 140.0
+        },
+        "Tidak_Naik": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 138.0
+        },
+        "accuracy": 0.5035971223021583,
+        "macro avg": {
+          "precision": 0.2517985611510791,
+          "recall": 0.5,
+          "f1-score": 0.3349282296650718,
+          "support": 278.0
+        },
+        "weighted avg": {
+          "precision": 0.25361006159101496,
+          "recall": 0.5035971223021583,
+          "f1-score": 0.337337785274173,
+          "support": 278.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          140,
+          0
+        ],
+        [
+          138,
+          0
+        ]
+      ],
+      "urutan_label_matrix": [
+        "Naik",
+        "Tidak_Naik"
+      ]
+    },
+    "Logistic_Regression": {
+      "accuracy": 0.49640287769784175,
+      "balanced_accuracy": 0.4934265010351967,
+      "f1_macro": 0.3902362599486119,
+      "n": 278,
+      "per_kelas": {
+        "Naik": {
+          "precision": 0.5,
+          "recall": 0.9071428571428571,
+          "f1-score": 0.6446700507614214,
+          "support": 140.0
+        },
+        "Tidak_Naik": {
+          "precision": 0.4583333333333333,
+          "recall": 0.07971014492753623,
+          "f1-score": 0.13580246913580246,
+          "support": 138.0
+        },
+        "accuracy": 0.49640287769784175,
+        "macro avg": {
+          "precision": 0.47916666666666663,
+          "recall": 0.4934265010351967,
+          "f1-score": 0.3902362599486119,
+          "support": 278.0
+        },
+        "weighted avg": {
+          "precision": 0.47931654676258995,
+          "recall": 0.49640287769784175,
+          "f1-score": 0.3920667188753228,
+          "support": 278.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          127,
+          13
+        ],
+        [
+          127,
+          11
+        ]
+      ],
+      "urutan_label_matrix": [
+        "Naik",
+        "Tidak_Naik"
+      ]
+    },
+    "Random_Forest": {
+      "accuracy": 0.49280575539568344,
+      "balanced_accuracy": 0.49037267080745345,
+      "f1_macro": 0.4257460554652134,
+      "n": 278,
+      "per_kelas": {
+        "Naik": {
+          "precision": 0.4978540772532189,
+          "recall": 0.8285714285714286,
+          "f1-score": 0.6219839142091153,
+          "support": 140.0
+        },
+        "Tidak_Naik": {
+          "precision": 0.4666666666666667,
+          "recall": 0.15217391304347827,
+          "f1-score": 0.22950819672131148,
+          "support": 138.0
+        },
+        "accuracy": 0.49280575539568344,
+        "macro avg": {
+          "precision": 0.48226037195994276,
+          "recall": 0.49037267080745345,
+          "f1-score": 0.4257460554652134,
+          "support": 278.0
+        },
+        "weighted avg": {
+          "precision": 0.4823725568901102,
+          "recall": 0.49280575539568344,
+          "f1-score": 0.4271578386216443,
+          "support": 278.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          116,
+          24
+        ],
+        [
+          117,
+          21
+        ]
+      ],
+      "urutan_label_matrix": [
+        "Naik",
+        "Tidak_Naik"
+      ]
+    }
+  },
+  "baseline_kelas": "Naik",
+  "lebih_baik_dari_baseline_validasi": true,
+  "aturan_pemilihan": "F1 macro validasi tertinggi di antara Logistic Regression dan Random Forest; seri memilih Logistic Regression.",
+  "fit_final": "Model terpilih tetap hasil fit pada train saja; tidak refit pada validasi/test.",
+  "parameter": {
+    "Baseline_Mayoritas": {
+      "constant": "None",
+      "random_state": "None",
+      "strategy": "most_frequent"
+    },
+    "Logistic_Regression": {
+      "memory": "None",
+      "steps": "[('standardscaler', StandardScaler()), ('logisticregression', LogisticRegression(max_iter=2000, random_state=42))]",
+      "transform_input": "None",
+      "verbose": "False",
+      "standardscaler": "StandardScaler()",
+      "logisticregression": "LogisticRegression(max_iter=2000, random_state=42)",
+      "standardscaler__copy": "True",
+      "standardscaler__with_mean": "True",
+      "standardscaler__with_std": "True",
+      "logisticregression__C": "1.0",
+      "logisticregression__class_weight": "None",
+      "logisticregression__dual": "False",
+      "logisticregression__fit_intercept": "True",
+      "logisticregression__intercept_scaling": "1",
+      "logisticregression__l1_ratio": "0.0",
+      "logisticregression__max_iter": "2000",
+      "logisticregression__n_jobs": "None",
+      "logisticregression__penalty": "deprecated",
+      "logisticregression__random_state": "42",
+      "logisticregression__solver": "lbfgs",
+      "logisticregression__tol": "0.0001",
+      "logisticregression__verbose": "0",
+      "logisticregression__warm_start": "False"
+    },
+    "Random_Forest": {
+      "bootstrap": "True",
+      "ccp_alpha": "0.0",
+      "class_weight": "None",
+      "criterion": "gini",
+      "max_depth": "6",
+      "max_features": "sqrt",
+      "max_leaf_nodes": "None",
+      "max_samples": "None",
+      "min_impurity_decrease": "0.0",
+      "min_samples_leaf": "15",
+      "min_samples_split": "2",
+      "min_weight_fraction_leaf": "0.0",
+      "monotonic_cst": "None",
+      "n_estimators": "300",
+      "n_jobs": "-1",
+      "oob_score": "False",
+      "random_state": "42",
+      "verbose": "0",
+      "warm_start": "False"
+    }
+  },
+  "test_dijalankan": true
+}
